@@ -8,7 +8,7 @@ token_bot = # put authentication token here
 update_id = None
 
 def start(bot, update):
-    bot.send_message(chat_id=update.message.chat_id, text='Hej allesammans. Number of quotes is %d. Write /help for info.', 146)           
+    bot.send_message(chat_id=update.message.chat_id, text='Hi. Number of quotes is %d. Write /help for info.', 146)           
 
 def helpu(bot, update):
     bot.send_message(chat_id=update.message.chat_id, text='How to quiz: \n /qq quiz - to get a quote \n /qq guess - to write a gues \n /qq ga - to get the answer if you cannot figure it out')
@@ -60,8 +60,8 @@ def main():
     updater = Updater(token=token_bot)
     dispatcher = updater.dispatcher
 
-    start_handler = CommandHandler('hej', start)
-    dispatcher.add_handler(start_handler)
+    #start_handler = CommandHandler('hej', start)
+    #dispatcher.add_handler(start_handler)
 
     
     helpu_handler = CommandHandler('help', helpu)
